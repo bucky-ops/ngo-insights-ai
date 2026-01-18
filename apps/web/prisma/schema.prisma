@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id           String   @id @default(uuid())
+  name         String?
+  email        String?
+  phone        String?
+  organization String?
+  country      String?
+  region       String?
+  interest     String?
+  source       String?
+  createdAt    DateTime @default(now())
+}
+
+model PricingPlan {
+  id            String   @id @default(uuid())
+  name          String   @unique
+  monthlyPrice  Float?
+  yearlyPrice   Float?
+  features      String[]
+  description   String?
+}
+
+model BlogPost {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  excerpt     String?
+  content     String
+  author      String?
+  publishedAt DateTime?
+  isPublished Boolean  @default(false)
+}
+
+model CommunityNeed {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  sector      String?
+  urgency     String?  @default("Medium")
+  location    String?
+  source      String?
+  url         String?
+  scrapedAt   DateTime @default(now())
+}

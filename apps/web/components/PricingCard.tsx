@@ -11,10 +11,10 @@ interface PricingCardProps {
 
 export default function PricingCard({ name, price, features, cta, popular }: PricingCardProps) {
   return (
-    <div className={`relative flex flex-col p-8 bg-white border ${popular ? 'border-brand-500 shadow-xl scale-105 z-10' : 'border-slate-200 shadow-sm'} rounded-3xl transition-all duration-300 hover:shadow-premium`}>
+    <div className={`relative flex flex-col p-8 bg-white border ${popular ? 'border-brand-500 shadow-xl scale-105 z-10' : 'border-slate-200 shadow-sm'} rounded-3xl transition-all duration-300 hover:shadow-premium-hover hover:-translate-y-1`}>
       {popular && (
         <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-brand-500 text-white text-xs font-bold uppercase tracking-widest rounded-full">
-          Most Popular
+          MOST POPULAR
         </div>
       )}
 

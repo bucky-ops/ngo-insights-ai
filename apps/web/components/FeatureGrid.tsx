@@ -45,7 +45,7 @@ export default function FeatureGrid({ compact = false }: { compact?: boolean }) 
             <feature.icon className="w-6 h-6 text-brand-500 group-hover:text-white" />
           </div>
           <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">{feature.title}</h3>
-          <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+          <p className="text-slate-600 leading-relaxed group-hover:text-brand-800">{feature.description}</p>
         </div>
       ))}
     </div>

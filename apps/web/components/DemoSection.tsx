@@ -1,6 +1,9 @@
 import React from 'react';
 import { Calendar, MessageCircle, PlayCircle, Star } from 'lucide-react';
 
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/your-org/demo';
+const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.me/2547XXXXXXXX';
+
 export default function DemoSection() {
   return (
     <section id="demo" className="py-24 bg-slate-950 overflow-hidden relative">
@@ -10,8 +13,8 @@ export default function DemoSection() {
 
       <div className="container relative mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">See the AI in Action</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">See AI in Action</h2>
+          <p className="text-slate-300 max-w-2xl mx-auto">
             Experience how our platform identifies community needs and transforms them into impact-driven outreach in seconds.
           </p>
         </div>
@@ -20,7 +23,7 @@ export default function DemoSection() {
           <div className="order-2 lg:order-1">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video relative group">
               <iframe
-                src="https://calendly.com/your-org/demo"
+                src={calendlyUrl}
                 width="100%"
                 height="100%"
                 frameBorder="0"
@@ -62,10 +65,10 @@ export default function DemoSection() {
               <h5 className="text-white font-bold mb-2">Prefer a quick chat?</h5>
               <p className="text-brand-100/70 text-sm mb-6">Connect with our regional team directly via WhatsApp for a faster response.</p>
               <a
-                href="https://wa.me/254747845084"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 text-brand-400 hover:text-brand-300 transition-colors font-bold"
+                className="inline-flex items-center space-x-3 text-brand-300 hover:text-brand-200 transition-colors font-bold"
               >
                 <MessageCircle className="w-6 h-6" />
                 <span>Chat on WhatsApp</span>

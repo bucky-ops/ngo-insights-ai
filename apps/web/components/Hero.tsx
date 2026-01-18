@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-24 sm:pt-24 sm:pb-32">
+    <section className="relative overflow-hidden bg-white pt-16 pb-24 sm:pt-24 sm:pb-32">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-brand-50 to-transparent opacity-50 -z-10 blur-3xl rounded-full" />
 
@@ -12,11 +12,11 @@ export default function Hero() {
         <div className="text-center">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-sm font-medium mb-6 animate-fade-in">
             <Sparkles className="w-4 h-4" />
-            <span>Empowering NGOs in East Africa with AI</span>
+            <span className="ml-2 uppercase tracking-wider font-semibold">Empowering NGOs in East Africa with AI</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-            Collect, Analyze, and <br />
+            Collect, Analyze, and <br className="sm:hidden" />
             <span className="gradient-text">Automate Donor Outreach</span>
           </h1>
 
@@ -50,12 +50,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
-
-function Layout({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><line x1="3" x2="21" y1="9" y2="9" /><line x1="9" x2="9" y1="21" y2="9" /></svg>
-  )
 }

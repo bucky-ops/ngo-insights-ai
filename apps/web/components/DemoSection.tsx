@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, MessageCircle, PlayCircle, Star } from 'lucide-react';
 
-const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/your-org/demo';
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/muchiricollins98/30min';
 const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.me/2547XXXXXXXX';
 
 export default function DemoSection() {
